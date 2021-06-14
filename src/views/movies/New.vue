@@ -22,6 +22,8 @@
       <div class="form-group">
         <label>Plot:</label>
         <input type="text" class="form-control" v-model="newMovieParams.plot" />
+        <br />
+        <small v-if="newMovieParams.plot.length > 500">Plot cannot exceed 500 characters</small>
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
@@ -35,7 +37,9 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newMovieParams: {},
+      newMovieParams: {
+        plot: "",
+      },
       errors: [],
     };
   },
