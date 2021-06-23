@@ -8,6 +8,7 @@ import MoviesEdit from "../views/movies/Edit.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import ActorsIndex from "../views/actors/Index.vue";
 
 Vue.use(VueRouter);
 
@@ -56,6 +57,11 @@ const routes = [
     path: "/about",
     name: "About",
     component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/actors",
+    name: "actors-index",
+    component: ActorsIndex,
   },
 ];
 
